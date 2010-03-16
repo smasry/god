@@ -419,8 +419,10 @@ module God
       status = 
       if self.trigger?(metric, result)
         "[trigger]"
+      elsif result
+        "[down]"
       else
-        "[ok]"
+        "[up]"
       end
       
       messages = []
